@@ -50,13 +50,13 @@ a, a:hover, a:visited {
 
 h1, h2, h3 {
     margin-top: 0;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     font-size: 36px;
     font-weight: normal
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 20px;
     margin-bottom: 0px;
 }
 
@@ -86,7 +86,7 @@ ul {
     }
 
 .home ul {
-    margin: 40px 0;
+    margin: 10px 0;
 }
 
 p {
