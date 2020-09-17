@@ -1,0 +1,412 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{dsfont}    
+\usepackage{mathrsfs}
+\usepackage{amsthm}
+\usepackage{verbatim}
+\usepackage{esint}
+\usepackage{hyperref}
+%\usepackage{fourier}
+%\usepackage{mathpazo}
+%\usepackage{showkeys}
+\usepackage{times}
+\usepackage{color}
+\usepackage[left=2.5cm,right=2.5cm,top=4.0cm,bottom=3.5cm]{geometry}
+\author{Iandoli Felice}
+\title{Birkhoff Normal Forms}
+
+\numberwithin{equation}{section}
+
+%\newtheorem{de}{Definition}
+%\newtheorem{prop}{Proposition}
+%\newtheorem{theo}{Theorem}
+%\newtheorem{notation}{Notation}
+%\newtheorem{lemma}{Lemma}
+\newtheorem{hyp}{Hypothesis}[section]
+%\newtheorem{rmk}{Remark}
+
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{theo}{Theorem}[section]
+%\newtheorem*{prop*}{Theorem}
+%\newtheorem{theo}[theorem]{Theorem}
+\newtheorem{coro}[theorem]{Corollary}
+\newtheorem{de}{Definition}[section]
+%\newtheorem{de}[theorem]{Definition}
+\newtheorem{lemma}{Lemma}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}{Proposition}[section]
+%\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{rmk}{Remark}[section]
+%\newtheorem{rmk}[theorem]{Remark}
+%\newtheorem{con}[theorem]{Conjecture}
+\newtheorem{const}[theorem]{Constraint}
+%\newtheorem{hypo}{Hypothesis}
+%\newtheorem{exe}{Example}
+%\newtheorem{case}{Case}
+
+
+
+
+\renewcommand{\thetheorem}{\thesection.\arabic{theorem}}
+\renewcommand{\theequation}{\thesection.\arabic{equation}}
+%\renewcommand{\thelemma}{\thesection.\arabic{lemma}}
+
+%\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+
+
+%\newcommand{\zerarcounters}{\setcounter{equation}{0}\setcounter{theorem}{0}\setcounter{figure}{0}}
+
+\newcommand{\zerarcounters}{\setcounter{equation}{0}}
+%\setcounter{theorem}{0}}
+%\newcommand{\zerarcountersaa}{\setcounter{theorem}{0}}
+
+%\setcounter{figure}{0}}
+
+
+
+\newcommand{\lv}{\lvert}
+\newcommand{\rv}{\rvert}
+%\newcommand{\TTT}{\mathbb{T}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Rn}{\mathbb{R}^N}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\tbar}{\overline{t}}
+\newcommand{\convdeb}{\rightharpoonup}
+\newcommand{\Lar}{L^a((0,\infty),L^r)}
+\newcommand{\eqcit}[1]{\overset{({#1})}{=}}
+\newcommand{\leqcit}[1]{\overset{({#1})}{\leq}}
+\newcommand{\geqcit}[1]{\overset{({#1})}{\geq}}
+\newcommand{\conv}{\xrightarrow{n\rightarrow\infty}}
+\newcommand{\Hum}{H_+^{1/2}(\mathbb{S}^1)}
+\newcommand{\Hlam}{H^{\lambda}}
+\newcommand{\Hlamo}{\dot{H}^{\lambda}}
+\newcommand{\Hs}{H_+^s(\mathbb{S}^1)}
+\newcommand{\scalar}[2]{\langle{#1},{#2}\rangle}
+\newcommand{\Huno}{H^1(\Rn)}
+\newcommand{\norm}[2]{\left \lVert {#1} \right \rVert_{{#2}}}
+\newcommand{\asso}[1]{\left \lvert {#1} \right \rvert}
+\newcommand{\set}[1]{\left\{{#1}\right\}}
+\newcommand{\intbordo}{\int_{+\partial U}}
+\newcommand{\lap}{\triangle}
+\newcommand{\grad}{\triangledown}
+\newcommand{\fourier}{\mathcal{F}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\scattering}{\emph{scattering }}
+\newcommand{\tonde}[1]{\left({#1}\right)}
+\newcommand{\quadre}[1]{\left[{#1}\right]}
+\newcommand{\forme}[1]{\mathcal{\tilde{L}}^{\nu,\, N}_{#1}}
+\newcommand{\operatori}[1]{\mathcal{\tilde{M}}^{\nu,N}_{#1}}
+\newcommand{\mututto}{\mu(n_1,\cdots, n_{p+q})}
+\newcommand{\muprimi}{\mu(n_1,\cdots,n_p,n)}
+\newcommand{\musecondi}{\mu(n,n_{p+1},\cdots,n_{p+q})}
+\newcommand{\stutto}{S(n_1,\cdots, n_{p+q})}
+\newcommand{\sprimi}{S(n_1,\cdots,n_p,n)}
+\newcommand{\ssecondi}{S(n,n_{p+1},\cdots,n_{p+q})}
+\newcommand{\ubar}{\bar{u}}
+\DeclareMathOperator*{\supess}{sup\,ess}
+%\renewcommand{\captionfont}{\small}
+\newcommand{\HH}{{\mathcal H}}
+\newcommand{\ZZZ}{\mathds{Z}}
+\newcommand{\CCC}{\mathds{C}}
+\newcommand{\NNN}{\mathds{N}}
+\newcommand{\QQQ}{\mathds{Q}}
+\newcommand{\RRR}{\mathds{R}}
+\newcommand{\TTT}{\mathbb{T}}
+\newcommand{\uno}{\mathds{1}}
+\newcommand{\Ka}{{K}}
+\newcommand{\db}{{\varrho}}
+\newcommand{\calA}{{\calX}}
+\newcommand{\BB}{{\mathcal B}}
+\newcommand{\CCCC}{{\mathcal C}}
+\newcommand{\DD}{{\mathcal D}}
+\newcommand{\calE}{{\mathcal E}}
+\newcommand{\calF}{{\mathcal F}}
+\newcommand{\calG}{{\mathcal G}}
+\newcommand{\calH}{{\mathcal H}}
+\newcommand{\calI}{{\mathcal I}}
+\newcommand{\calJ}{{\mathcal J}}
+\newcommand{\calK}{{\mathcal K}}
+\newcommand{\calL}{{\mathcal L}}
+\newcommand{\MM}{{\mathcal M}}
+\newcommand{\NN}{{\mathcal N}}
+\newcommand{\calO}{{\mathcal O}}
+\newcommand{\calP}{{\mathcal P}}
+\newcommand{\calQ}{{\mathcal Q}}
+\newcommand{\RR}{{\mathcal R}}
+\newcommand{\SSSS}{{\mathcal S}}
+\newcommand{\TT}{{\mathcal T}}
+\newcommand{\calU}{{\mathcal U}}
+\newcommand{\VV}{{\mathcal V}}
+\newcommand{\tV}{{\mathtt V}}
+\newcommand{\tm}{{\mathtt m}}
+\newcommand{\calW}{{\mathcal W}}
+\newcommand{\calX}{{\mathcal X}}
+\newcommand{\calY}{{\mathcal Y}}
+\newcommand{\calZ}{{\mathcal Z}}
+
+\newcommand{\calmA}{{\mathscr A}}
+\newcommand{\calmB}{{\mathscr B}}
+\newcommand{\calmC}{{\mathscr C}}
+\newcommand{\calmD}{{\mathscr D}}
+\newcommand{\calmE}{{\mathscr E}}
+\newcommand{\calmF}{{\mathscr F}}
+\newcommand{\calmG}{{\mathscr G}}
+\newcommand{\calmH}{{\mathscr H}}
+\newcommand{\calmI}{{\mathscr I}}
+\newcommand{\calmJ}{{\mathscr J}}
+\newcommand{\calmK}{{\mathscr K}}
+\newcommand{\calmL}{{\mathscr L}}
+\newcommand{\calmM}{{\mathscr M}}
+\newcommand{\calmN}{{\mathscr N}}
+\newcommand{\calmO}{{\mathscr O}}
+\newcommand{\calmP}{{\mathscr P}}
+\newcommand{\calmQ}{{\mathscr Q}}
+\newcommand{\calmR}{{\mathscr R}}
+\newcommand{\calmS}{{\mathscr S}}
+\newcommand{\calmT}{{\mathscr T}}
+\newcommand{\calmU}{{\mathscr U}}
+\newcommand{\calmV}{{\mathscr V}}
+\newcommand{\calmW}{{\mathscr W}}
+\newcommand{\calmX}{{\mathscr X}}
+\newcommand{\calmY}{{\mathscr Y}}
+\newcommand{\calmZ}{{\mathscr Z}}
+
+\newcommand{\gota}{{\mathfrak a}}
+\newcommand{\gotb}{{\mathfrak b}}
+\newcommand{\gotc}{{\mathfrak c}}
+\newcommand{\gotd}{{\mathfrak d}}
+\newcommand{\gote}{{\mathfrak e}}
+\newcommand{\gotf}{{\mathfrak f}}
+\newcommand{\gotg}{{\mathfrak g}}
+\newcommand{\goth}{{\mathfrak h}}
+\newcommand{\goti}{{\mathfrak i}}
+\newcommand{\gotj}{{\mathfrak j}}
+\newcommand{\gotk}{{\mathfrak k}}
+\newcommand{\gotl}{{\mathfrak l}}
+\newcommand{\gotm}{{\mathfrak m}}
+\newcommand{\gotn}{{\mathfrak n}}
+\newcommand{\goto}{{\mathfrak o}}
+\newcommand{\gotp}{{\mathfrak p}}
+\newcommand{\gotq}{{\mathfrak q}}
+\newcommand{\gotr}{{\mathfrak r}}
+\newcommand{\gots}{{\mathfrak s}}
+\newcommand{\gott}{{\mathfrak t}}
+\newcommand{\gotu}{{\mathfrak u}}
+\newcommand{\gotv}{{\mathfrak v}}
+\newcommand{\gotx}{{\mathfrak x}}
+\newcommand{\gotz}{{\mathfrak z}}
+\newcommand{\gotw}{{\mathfrak w}}
+\newcommand{\goty}{{\mathfrak y}}
+\newcommand{\gotA}{{\mathfrak A}}
+\newcommand{\gotB}{{\mathfrak B}}
+\newcommand{\gotC}{{\mathfrak C}}
+\newcommand{\gotD}{{\mathfrak D}}
+\newcommand{\gotE}{{\mathfrak E}}
+\newcommand{\gotF}{{\mathfrak F}}
+\newcommand{\gotG}{{\mathfrak G}}
+\newcommand{\gotH}{{\mathfrak H}}
+\newcommand{\gotI}{{\mathfrak I}}
+\newcommand{\gotJ}{{\mathfrak J}}
+\newcommand{\gotK}{{\mathfrak K}}
+\newcommand{\gotL}{{\mathfrak L}}
+\newcommand{\gotM}{{\mathfrak M}}
+\newcommand{\gotN}{{\mathfrak N}}
+\newcommand{\gotO}{{\mathfrak O}}
+\newcommand{\gotP}{{\mathfrak P}}
+\newcommand{\gotQ}{{\mathfrak Q}}
+\newcommand{\gotR}{{\mathfrak R}}
+\newcommand{\gotS}{{\mathfrak S}}
+\newcommand{\gotT}{{\mathfrak T}}
+\newcommand{\gotU}{{\mathfrak U}}
+\newcommand{\gotV}{{\mathfrak V}}
+\newcommand{\gotX}{{\mathfrak X}}
+\newcommand{\gotZ}{{\mathfrak Z}}
+\newcommand{\gotW}{{\mathfrak W}}
+\newcommand{\gotY}{{\mathfrak Y}}
+
+\newcommand{\matA}{{\mathscr A}}
+\newcommand{\matB}{{\mathscr B}}
+\newcommand{\matC}{{\mathscr C}}
+\newcommand{\matD}{{\mathscr D}}
+\newcommand{\matE}{{\mathscr E}}
+\newcommand{\matF}{{\mathscr F}}
+\newcommand{\matG}{{\mathscr G}}
+\newcommand{\matH}{{\mathscr H}}
+\newcommand{\matI}{{\mathscr I}}
+\newcommand{\matJ}{{\mathscr J}}
+\newcommand{\matK}{{\mathscr K}}
+\newcommand{\matL}{{\mathscr L}}
+\newcommand{\matM}{{\mathscr M}}
+\newcommand{\matN}{{\mathscr N}}
+\newcommand{\matO}{{\mathscr O}}
+\newcommand{\matP}{{\mathscr P}}
+\newcommand{\matQ}{{\mathscr Q}}
+\newcommand{\matR}{{\mathscr R}}
+\newcommand{\matS}{{\mathscr S}}
+\newcommand{\matT}{{\mathscr T}}
+\newcommand{\matU}{{\mathscr U}}
+\newcommand{\matV}{{\mathscr V}}
+\newcommand{\matX}{{\mathscr X}}
+\newcommand{\matZ}{{\mathscr Z}}
+\newcommand{\matW}{{\mathscr W}}
+\newcommand{\matY}{{\mathscr Y}}
+
+\newcommand{\und}{\underline}
+\newcommand{\unda}{\underline{a}}
+\newcommand{\undb}{\underline{b}}
+\newcommand{\undc}{\underline{c}}
+\newcommand{\undd}{\underline{d}}
+\newcommand{\unde}{\underline{e}}
+\newcommand{\undf}{\underline{f}}
+\newcommand{\undg}{\underline{g}}
+\newcommand{\undh}{\underline{h}}
+\newcommand{\undi}{\underline{i}}
+\newcommand{\undj}{\underline{j}}
+\newcommand{\undk}{\underline{k}}
+\newcommand{\undl}{\underline{l}}
+\newcommand{\undm}{\underline{m}}
+\newcommand{\undn}{\underline{n}}
+\newcommand{\undo}{\underline{o}}
+\newcommand{\undp}{\underline{p}}
+\newcommand{\undq}{\underline{q}}
+\newcommand{\undr}{\underline{r}}
+\newcommand{\unds}{\underline{s}}
+\newcommand{\undt}{\underline{t}}
+\newcommand{\undu}{\underline{u}}
+\newcommand{\undv}{\underline{v}}
+\newcommand{\undw}{\underline{w}}
+\newcommand{\undx}{\underline{x}}
+\newcommand{\undy}{\underline{y}}
+\newcommand{\undz}{\underline{z}}
+\newcommand{\undA}{\underline{A}}
+\newcommand{\undB}{\underline{B}}
+\newcommand{\undC}{\underline{C}}
+\newcommand{\undD}{\underline{D}}
+\newcommand{\undE}{\underline{E}}
+\newcommand{\undF}{\underline{F}}
+\newcommand{\undG}{\underline{G}}
+\newcommand{\undH}{\underline{H}}
+\newcommand{\undI}{\underline{I}}
+\newcommand{\undJ}{\underline{J}}
+\newcommand{\undK}{\underline{K}}
+\newcommand{\undL}{\underline{L}}
+\newcommand{\undM}{\underline{M}}
+\newcommand{\undN}{\underline{N}}
+\newcommand{\undO}{\underline{O}}
+\newcommand{\undP}{\underline{P}}
+\newcommand{\undQ}{\underline{Q}}
+\newcommand{\undR}{\underline{R}}
+\newcommand{\undS}{\underline{S}}
+\newcommand{\undT}{\underline{T}}
+\newcommand{\undU}{\underline{U}}
+\newcommand{\undV}{\underline{V}}
+\newcommand{\undW}{\underline{W}}
+\newcommand{\undX}{\underline{X}}
+\newcommand{\undY}{\underline{Y}}
+\newcommand{\undZ}{\underline{Z}}
+\newcommand{\undzero}{\underline{0}}
+\newcommand{\undomega}{\underline{\omega}}
+\newcommand{\weyl}{{\rm Op}^{W}}
+\newcommand{\bony}{{\rm Op}^{\mathcal{B}}}
+\newcommand{\bonyw}{{\rm Op}^{\mathcal{B}W}}
+\newcommand{\ol}{\overline}
+\newcommand{\oln}{\overline{n}}
+
+\newcommand{\Fullbox}{{\rule{2.0mm}{2.0mm}}}
+\newcommand{\ES}{\hfill\Box}
+\newcommand{\EP}{\hfill\Fullbox\vspace{0.2cm}}
+\newcommand{\prova}{\noindent{\it Proof. }}
+\newcommand{\io}{\infty}
+\newcommand{\e}{\varepsilon}
+\newcommand{\al}{\alpha}
+%\newcommand{\de}{\delta}
+\newcommand{\be}{\beta}
+\newcommand{\ze}{\zeta}
+\newcommand{\n}{\nu}
+\newcommand{\m}{\mu}
+\newcommand{\tu}{{\mathtt u}}
+%\newcommand{\tv}{{\mathtt v}}
+\newcommand{\x}{\xi}
+\newcommand{\p}{\pi}
+\newcommand{\ka}{\kappa}
+\newcommand{\g}{\gamma}
+\newcommand{\om}{\omega}
+\newcommand{\h}{\eta}
+\newcommand{\la}{\lambda}
+\newcommand{\La}{\Lambda}
+\newcommand{\f}{\varphi}
+\newcommand{\s}{\sigma}
+\newcommand{\id}{\mathbb{1}}
+\newcommand{\B}{\boldsymbol{B}}
+\newcommand{\del}{\partial}
+\newcommand{\laa}{\langle}
+\newcommand{\raa}{\rangle}
+\newcommand{\Me}[1]{\laa#1\raa}
+\newcommand{\pint}[2]{\langle#1, \, #2\rangle}
+\newcommand{\av}[1]{\langle #1 \rangle}
+\newcommand{\wh}{\widehat}
+\newcommand{\vm}{\mathbf{m}}
+\newcommand{\oo}{\omega}
+\newcommand{\mm}{\boldsymbol{\mu}}
+\newcommand{\aaa}{\boldsymbol{\alpha}}
+\newcommand{\xxx}{\boldsymbol{\xi}}
+\newcommand{\hhh}{\boldsymbol{\eta}}
+\newcommand{\nn}{\boldsymbol{\nu}}
+\newcommand{\pps}{\boldsymbol{\psi}}
+\newcommand{\dde}{\boldsymbol{\de}}
+\newcommand{\vzero}{\boldsymbol{0}}
+\newcommand{\xx}{\boldsymbol{x}}
+\newcommand{\yy}{\boldsymbol{y}}
+\newcommand{\zz}{\boldsymbol{z}}
+\newcommand{\ww}{\boldsymbol{w}}
+%\newcommand{\ee}{\boldsymbol{e}}
+\newcommand{\hh}{\boldsymbol{h}}
+\newcommand{\bs}{\boldsymbol{s}}
+\newcommand{\kk}{\boldsymbol{k}}
+\newcommand{\XX}{\boldsymbol{X}}
+\newcommand{\YY}{\boldsymbol{Y}}
+\newcommand{\ddd}{\boldsymbol{d}}
+\newcommand{\lla}{\boldsymbol{\lambda}}
+\newcommand{\ff}{\mathtt{f}}
+\newcommand{\ta}{\mathtt{a}}
+\newcommand{\tb}{\mathtt{b}}
+\newcommand{\tv}{\mathtt{v}}
+\newcommand{\aaaa}{\boldsymbol{a}}
+\newcommand{\bbbb}{\boldsymbol{b}}
+\newcommand{\gggg}{\boldsymbol{g}}
+\newcommand{\cc}{\boldsymbol{c}}
+\newcommand{\CC}{\boldsymbol{C}}
+\newcommand{\SSS}{\boldsymbol{S}}
+\newcommand{\AAA}{\boldsymbol{A}}
+\newcommand{\III}{\boldsymbol{I}}
+\newcommand{\der}{{\rm d}}
+\newcommand{{\resonance}}{relevant self-energy cluster }
+\newcommand{\resonances}{relevant self-energy clusters }
+\newcommand{\ii}{{\rm i}}
+\newcommand{\To}{{\mathring{T}}}
+\newcommand{\Co}{{\mathring{C}}}
+%\newcommand{\To}{{\buildrel_{\hskip.07truecm\circ} \over T}}
+\newcommand{\Tpru}{{\breve{T}}}
+\newcommand{\thetao}{{\mathring{\theta}}}
+\newcommand{\Go}{{\mathring{G}}}
+%\newcommand{\thetao}{{\buildrel_{\hskip.07truecm\circ} \over \theta}}
+\newcommand{\thetapru}{{\breve{\theta}}}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\De}{\Delta}
+\newcommand{\Gao}{\mathring{\Ga}}
+\newcommand{\bvert}{\boldsymbol{\vert}}
+\newcommand{\hcic}{{\bf{H}}}
+
+
+%\bibliographystyle{elsarticle-num}
+
+
+\bibliographystyle{plain}

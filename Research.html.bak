@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Research</title>
+
+</head>
+<body>
+    <main class="page">
+            <p>
+              My research pertains to microlocal analysis and partial differential equations.
+              </p>
+              <h3>Publications</h3>
+            <ul class='fa-ul ul__links'>
+                <li>
+                    <p>
+                        <span class="fa-li"><i class="fas fa-pepper-hot"></i></span> <a href="https://www.sciencedirect.com/science/article/pii/S0294144918300428
+">Local well-posedness for quasi-linear NLS with large Cauchy data on the circle</a>.  (with Roberto Feola)
+                    </p>
+                    <p>
+                        Annales de l'Institut Henri Poincaré C, Analyse Non Linéaire. <a href="https://arxiv.org/abs/1711.02388"> ArXiv version.</a>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <span class="fa-li"><i class="fas fa-apple-alt"></i></span> <a href="http://annaliscienze.sns.it/index.php?page=ForthcomingArticles">
+                          Long time existence for fully nonlinear NLS with small Cauchy data on the circle.</a> (with Roberto Feola)
+</p>
+                    <p>
+                        Annali della scuola Normale Superiore di Pisa (Classe di Scienze). <a href="https://arxiv.org/abs/1806.03437"> ArXiv version.</a>
+                    </p>
+                </li>
+            </ul>
+            <h3>Proceedings</h3>
+            <ul class='fa-ul ul__links'>
+<li>
+  <p>
+    <span class="fa-li"><i class="fas fa-truck-monster"></i></span> <a href="https://link.springer.com/chapter/10.1007%2F978-3-319-58904-6_11">
+      Dispersive Estimates for Schrödinger Operators with Point Interactions in ℝ^3.</a> (with Raffaele Scandone)
+  </p>
+  <p>
+    Advances in Quantum Mechanics. Contemporary trends and open problems.  <a href="https://arxiv.org/abs/1703.10194"> ArXiv version.</a>
+  </p>
+</li>
+</ul>
+</div>
+
+<h3>Preprints</h3>
+<ul class='fa-ul ul__links'>
+<li>
+<p>
+<span class="fa-li"><i class="fas fa-bomb"></i></span> <a href="https://arxiv.org/abs/2002.12448">
+A non-linear Egorov theorem and Poincaré-Birkhoff normal forms for quasi-linear PDEs on the circle.</a> (with Roberto Feola)
+</p>
+<p>
+</p>
+</li>
+<li>
+<p>
+<span class="fa-li"><i class="fas fa-cat"></i></span> <a href="https://arxiv.org/abs/2003.04815">
+Local well-posedness for the quasi-linear Schrödinger equation on tori.</a> (with Roberto Feola)
+</p>
+<p>
+</p>
+</li>
+</ul>
+
+<div>
+  <p>
+    <img src="jonassito.jpeg" title="The drowing was made by my friend Jonas Hirsch" alt="The drowing was made by my friend Jonas Hirsch" class="photo">
+</p>  </div>
+    </main>
+</body>
+</html>
