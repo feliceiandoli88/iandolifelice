@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.2)  23 SEP 2020 15:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.2)  5 NOV 2020 09:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -114,37 +114,37 @@ or fully-nonlinear Schr^^?odinger
  []
 
 
-Overfull \hbox (9.16121pt too wide) in paragraph at lines 105--112
+Overfull \hbox (9.16121pt too wide) in paragraph at lines 105--113
 \OMS/cmsy/m/n/10 ^^O$\OT1/cmr/m/n/10 R. Fe-ola, F.IANDOLI, \OT1/cmr/m/it/10 Lo-
 cal well-posedness for the quasi-linear Hamil-to-nian Schr^^?odinger
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--112
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 117--121
+Underfull \hbox (badness 10000) in paragraph at lines 105--113
 
  []
 
 [1
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (8.91663pt too wide) in paragraph at lines 125--130
+Underfull \hbox (badness 10000) in paragraph at lines 118--122
+
+ []
+
+
+Overfull \hbox (8.91663pt too wide) in paragraph at lines 126--131
 []$\OMS/cmsy/m/n/10 ^^O$ \OT1/cmr/m/it/10 Lo-cal and al-most global so-lu-tions
  for quasi-linear Schr^^?odinger equa-tions\OT1/cmr/m/n/10 , 2020, S^^Seminaire
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--130
+Underfull \hbox (badness 10000) in paragraph at lines 126--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--145
+Underfull \hbox (badness 10000) in paragraph at lines 137--146
 
  []
 
@@ -152,11 +152,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 136--145
 Here is how much of TeX's memory you used:
  816 strings out of 492609
  9535 string characters out of 6129048
- 71622 words of memory out of 5000000
+ 70622 words of memory out of 5000000
  4774 multiletter control sequences out of 15000+600000
  8056 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,43p,380b,271s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,43p,392b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.
 pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.p
 fb></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.p
@@ -167,7 +167,7 @@ usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr
 local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/l
 ocal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/lo
 cal/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on cv_iandoli.pdf (2 pages, 124826 bytes).
+Output written on cv_iandoli.pdf (2 pages, 127396 bytes).
 PDF statistics:
  51 PDF objects out of 1000 (max. 8388607)
  36 compressed objects within 1 object stream
