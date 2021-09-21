@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.2)  6 SEP 2021 11:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.12.2)  21 SEP 2021 11:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -132,33 +132,44 @@ Underfull \hbox (badness 10000) in paragraph at lines 114--118
  []
 
 
-Overfull \hbox (8.91663pt too wide) in paragraph at lines 122--127
-[]$\OMS/cmsy/m/n/10 ^^O$ \OT1/cmr/m/it/10 Lo-cal and al-most global so-lu-tions
- for quasi-linear Schr^^?odinger equa-tions\OT1/cmr/m/n/10 , 2020, S^^Seminaire
+Overfull \hbox (7.38605pt too wide) in paragraph at lines 122--131
+[]$\OMS/cmsy/m/n/10 ^^O$ \OT1/cmr/m/it/10 Ex-is-tence en temps grand pour l'^^S
+equation de Klein-Gordon sur les tores\OT1/cmr/m/n/10 , 2021, S^^Seminaire
+ []
+
+
+Overfull \hbox (7.38605pt too wide) in paragraph at lines 122--131
+\OMS/cmsy/m/n/10 ^^O$ \OT1/cmr/m/it/10 Ex-is-tence en temps grand pour l'^^Sequ
+ation de Klein-Gordon sur les tores\OT1/cmr/m/n/10 , 2021, S^^Seminaire
+ []
+
+
+Overfull \hbox (8.91663pt too wide) in paragraph at lines 122--131
+\OMS/cmsy/m/n/10 ^^O$ \OT1/cmr/m/it/10 Lo-cal and al-most global so-lu-tions fo
+r quasi-linear Schr^^?odinger equa-tions\OT1/cmr/m/n/10 , 2020, S^^Seminaire
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 122--127
+Underfull \hbox (badness 10000) in paragraph at lines 137--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 133--144
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--152
+Underfull \hbox (badness 10000) in paragraph at lines 153--156
 
  []
 
 [2] [3] ) 
 Here is how much of TeX's memory you used:
- 817 strings out of 492609
- 9543 string characters out of 6129048
+ 818 strings out of 492609
+ 9551 string characters out of 6129048
  71622 words of memory out of 5000000
- 4775 multiletter control sequences out of 15000+600000
+ 4776 multiletter control sequences out of 15000+600000
  8056 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  29i,10n,43p,387b,269s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -173,7 +184,7 @@ usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></u
 sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></us
 r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
 
-Output written on cv_iandoli.pdf (3 pages, 130144 bytes).
+Output written on cv_iandoli.pdf (3 pages, 130186 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  38 compressed objects within 1 object stream
